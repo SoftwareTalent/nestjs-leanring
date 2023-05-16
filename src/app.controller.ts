@@ -25,10 +25,10 @@ export class AppController {
     console.log(req.body);
     return req.body;
   }
-  @Get('/:userId')
-  getUser(@Param() params: { userId: number }) {
-    return params;
-  }
+  // @Get('/:userId')
+  // getUser(@Param() params: { userId: number }) {
+  //   return params;
+  // }
   @Delete('/:userId')
   deleteUser(@Param() params: { userId: number }) {
     return params;
