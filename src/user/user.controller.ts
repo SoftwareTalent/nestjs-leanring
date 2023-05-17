@@ -12,6 +12,7 @@ import { UserService } from './user.service';
 
 @Controller('/user')
 export class UserController {
+  //Dependency Injection
   constructor(private userService: UserService) {}
   @Get()
   getUsers() {
