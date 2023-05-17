@@ -1,16 +1,18 @@
 import { Injectable } from '@nestjs/common';
 import { Request } from 'express';
+import { UpdateUserDto } from './dto/update-user.dto';
+import { CreateUserDto } from './dto/create-user.dto';
 
 @Injectable()
 export class UserService {
   get() {
     return { name: 'Thomas Jin', email: 'thomas@example.com' };
   }
-  create(req: Request) {
-    return req.body;
+  create(createUserDro: CreateUserDto) {
+    return createUserDro;
   }
-  update(req: Request, param: { userId: number }) {
-    return { body: req.body, param };
+  update(updateUserDto: UpdateUserDto, param: { userId: number }) {
+    return { body: updateUserDto, param };
   }
   show(param: { userId: number }) {
     return param;
