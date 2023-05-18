@@ -22,7 +22,6 @@ export class UserController {
   }
   @Patch()
   update(@Req() req: Request) {
-    console.log(req.body);
     return req.body;
   }
   @Get('/:userId')
