@@ -23,6 +23,9 @@ export class UserService {
   show(id: number) {
     return this.userRespository.findOne({ where: { id } });
   }
+  findByEmail(email: string) {
+    return this.userRespository.findOne({ where: { email } });
+  }
   delete(userId: number) {
     return this.userRespository.delete(userId);
   }
